@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    height: 90px;
+    width: 254px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.copyright {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	
+}
+
+.body-bg{
+    background-color: #FF8181;
+}
+#content #about-things .content-div {
+	width: 100%;
+    text-align: center;
+	color: black;
+}
+
+
+#mainwrapper header {
+	/*Header */
+	background-color: #FFDBE2;
+	overflow: auto;
+	font-family: montserrat, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+#mainwrapper header #logo {
+	/* Company Logo text */
+	width: 28%;
+	float: left;
+	padding-left: 2%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: rgba(146,146,146,1.00);
+}
+#mainwrapper header nav {
+	/*Nav bar containing links in header */
+	text-align: right;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 2%;
+	width: 68%;
+	float: left;
+	color: rgba(146,146,146,1.00);
+}
+header nav a {
+	/* Links in header */
+	
+	padding-right: 2%;
+}
+#content #mainContent h1, #content #mainContent h2 {
+	/* Styling for main headings */
+	color: rgba(146,146,146,1.00);
+}
+#content #mainContent h3 {
+	/*Captions ot Taglines */
+	font-family: source-sans-pro, sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	color: rgba(146,146,146,1.00);
+}
+#content #mainContent #bannerImage {
+	/*Container for main banner image */
+	width: 100%;
+	background-color: rgba(208,207,207,1.00);
+}
+#content #mainContent p {
+	/* All paragraphs under maincontent */
+	color: rgba(146,146,146,1.00);
+	font-family: source-sans-pro, sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	text-align: justify;
+}
+#mainwrapper #content p {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#content #mainContent #authorInfo {
+	/* Author info section */
+	background-color: rgba(208,207,207,1.00);
+}
+#content #mainContent #authorInfo h2, #content #mainContent #authorInfo p {
+	color: rgba(255,255,255,1.00);
+	padding-left: 2%;
+	padding-top: 11px;
+}
+#content #mainContent #authorInfo p {
+	color: rgba(255,255,255,1.00);
+	padding-left: 2%;
+	padding-top: 0px;
+	padding-bottom: 11px;
+	padding-right: 2%;
+}
+footer article {
+	/* Footer articles */
+	width: 46%;
+	float: left;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-align: justify;
+	font-family: source-sans-pro, sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	color: rgba(146,146,146,1.00);
+}
+footer article h3 {
+	/* Footer article titles */
+	text-align: center;
+	font-family: montserrat, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+#mainContent {
+	/* Container for the blog post in individal blog view */
+	padding-left: 2%;
+	width: 71%;
+	float: left;
+	padding-right: 2%;
+	padding-top: 41px;
+}
+#mainwrapper #content #sidebar {
+	/* Sidebar*/
+	width: 19%;
+	padding-left: 2%;
+	padding-right: 2%;
+	float: left;
+	background-color: rgba(246,246,246,1.00);
+	margin-top: 150px;
+	padding-top: 32px;
+}
+#mainwrapper {
+    /* Container of all content */
+    width: 80%;
+    /* [disabled]overflow: auto; */
+    margin-left: 10%;
+}
+#content #sidebar input {
+	/* Search box in sidebar */
+	width: 98%;
+	height: 32px;
+}
+#content #sidebar #adimage {
+	/* Container for Image in sidebar */
+	width: 100%;
+	background-color: rgba(208,207,207,1.00);
+	margin-top: 46px;
+	float: none;
+	overflow: auto;
+}
+nav ul li {
+	list-style-type: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+nav ul {
+	padding-left: 0%;
+}
+nav ul li a {
+	color: rgba(146,146,146,1.00);
+	text-decoration: none;
+}
+#footerbar {
+    /* Footer bar at the bottom of the page */
+    height: 55px;
+    clear: both;
+    background-color: #9A9A9A;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+footer {
+	/* Container for footer artices */
+	width: 71%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.notOnDesktop {
+	/*element to be displayed only in mobile view and tabet view */
+	display: none;
+}
+#mainContent #bannerImage img {
+	/* Actual banner image */
+	width: 100%;
+}
+#sidebar #adimage img {
+	/* Image in sidebar */
+	width: 100%;
+	float: left;
+}
+#mainwrapper header nav a {
+	/* Links in header */
+	color: black;
+	text-decoration: none;
+}
+#mainwrapper #content #displayModels {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top-width: thick;
+    border-top-style: solid;
+    border-bottom-width: thick;
+    border-bottom-style: solid;
+}
+.body-bg #mainwrapper #content {
+    padding-bottom: 50%;
+}
+#mainwrapper #content #about-things {
+    justify-content: center;
+    display: flex;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    border-top-width: thick;
+    border-top-style: solid;
+    border-bottom-width: thick;
+    border-bottom-style: solid;
+	border-left-width: thick;
+	border-left-style: solid;
+	border-right-width: thick;
+	border-right-style: solid;
+    padding-top: 0%;
+    overflow: auto;
+}
+#mainwrapper #content #help-things {
+    justify-content: center;
+    display: flex;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    border-top-width: thick;
+    border-top-style: solid;
+    border-bottom-width: thick;
+    border-bottom-style: solid;
+	border-left-width: thick;
+	border-left-style: solid;
+	border-right-width: thick;
+	border-right-style: solid;
+}
+#content #about-things h1 {
+
+
+
+}
+#about-things .title-div article {
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+#content #about-things .title-div {
+    width: 100%;
+    text-align: center;
+}
+#content #help-things .content-div {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+#about-things .content-div article {
+    margin-top: 6%;
+    margin-bottom: 7%;
+    font-weight: bold;
+    justify-content: center;
+}
+#help-things .content-div h1 {
+    text-align: center;
+}
+#help-things .content-div article {
+    font-weight: bold;
+    margin-top: 6%;
+    margin-bottom: 7%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet view */
+@media screen and (max-width:769px) {
+.notOnDesktop {
+	/* Search box shown only in mobile view and Tablet view */
+	display: block;
+	text-align: right;
+	padding-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 96%;
+}
+#content .notOnDesktop input {
+	height: 28px;
+}
+#mainContent {
+	/* Container for the blog post */
+	padding-top: 0px;
+	float: none;
+	width: 96%;
+}
+#sidebar input {
+	/* Search box in sidebar */
+	display: none;
+}
+#mainwrapper #content #sidebar {
+	/* Sidebar*/
+	float: none;
+	width: 92%;
+	padding-top: 13px;
+	overflow: auto;
+	margin-top: 3px;
+	margin-left: 2%;
+	padding-bottom: 13px;
+}
+#content #sidebar #adimage {
+	/* Image in sidebar */
+	width: 60%;
+	margin-top: 0px;
+	float: left;
+}
+#content #sidebar nav {
+	/* Navigation links in sidebar */
+	width: 36%;
+	float: left;
+	padding-left: 4%;
+}
+#sidebar nav ul {
+	margin-top: 0px;
+}
+footer {
+	/* Footer region */
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+#content footer article {
+	/*Each footer article */
+	width: 46%;
+}
+#mainwrapper header {
+	/* Header */
+	width: 100%;
+}
+}
+
+/* Mobile view */
+@media screen and (max-width:480px) {
+#mainwrapper header #logo {
+	/* Company Logo text in header */
+	width: 96%;
+	margin-left: 2%;
+}
+#mainwrapper header nav {
+	/*navigation links in header */
+	text-align: center;
+	background-color: #FFDBE2;
+	width: 98%;
+}
+#content #sidebar #adimage {
+	/* Container for image in sidebar */
+	width: 100%;
+}
+#content #sidebar nav {
+	/* Navigation bar for links in sidebar */
+	width: 96%;
+	padding-top: 7px;
+}
+#sidebar nav ul li {
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+}
+#mainwrapper #content #sidebar {
+	/* sidebar */
+	padding-bottom: 0px;
+}
+#content .notOnDesktop {
+	/* Search box shown only in mobile and tablet view */
+	width: 100%;
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#content .notOnDesktop input {
+	width: 80%;
+	text-align: center;
+}
+#content #mainContent h3 {
+	/* Title under maincontent, if any */
+	font-size: 14px;
+}
+#content footer article {
+	/* Each foter article */
+	width: 96%;
+}
+	
+#app {
+    background: #FFDBE2;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    height: 100%;
+    border-top-width: thick;
+    border-top-style: solid;
+}
+	
+.cameras h2{
+  color:black;
+}
+
+.scans h2{
+  color:black;
+}
+
+.cameras ul {
+  padding: 15px 20px;
+}
+.cameras .active {
+  font-weight: bold;
+  color: #009900;
+}
+.cameras a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cameras a:hover {
+  text-decoration: underline;
+}
+
+.preview-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scans li {
+  color: black;
+  font-size: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+.scans-enter-active {
+  transition: background 3s;
+  text-decoration-color: black;
+}
+.scans-enter {
+  background: yellow;
+}
+.empty {
+  font-style: italic;
+}
+
+.scan-text{
+	font-weight: bold;
+	color:black;	
+}
+}
