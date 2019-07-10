@@ -40,10 +40,11 @@
         $result = $conn->query($sql);
         
         if ($result->num_rows > 0) {
-            echo "<table><tr><th>id</th><th>title</th><th>picture</th></tr>";
+            echo "there are ". $result->num_rows . "models showing right now!";
+            echo "<table><tr><th>title</th><th>picture</th></tr>";
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["_id"]. "</td><td>" . $row["model_title"]. "</td><td><a href='model-info.php?id=".$row['_id']."'><img class='img-fluid img-thumbnail' src='images/" .$row["model_pic"]. "'></a></td></tr>";
+                echo "<tr><td>" . $row["model_title"]. "</td><td><a href='model-info.php?id=".$row['_id']."'><img class='img-fluid img-thumbnail' src='images/" .$row["model_pic"]. "'></a></td></tr>";
             }
             echo "</table>";
         } else {
