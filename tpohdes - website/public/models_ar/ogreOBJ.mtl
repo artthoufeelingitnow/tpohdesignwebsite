@@ -1,0 +1,19 @@
+newmtl blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 1704074B_MichaelCedricEstillore_P04_Assignment1_Final_colourMap.tif
+bump 1704074B_MichaelCedricEstillore_P04_Assignment1_Final_normalMap.tif -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks 1704074B_MichaelCedricEstillore_P04_Assignment1_Final_specularMap.tif
+newmtl blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dirt-texture.jpg
+bump dirt-texture_NRM.tif -bm 1
+Ni 1.00
+Ks 0.50 0.50 0.50
