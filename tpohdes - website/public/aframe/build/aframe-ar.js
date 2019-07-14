@@ -8353,7 +8353,7 @@ AFRAME.registerComponent('arjs-anchor', {
 
 			if( _this.data.preset === 'hiro' ){
 				markerParameters.type = 'pattern'
-				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
+				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'ar-patterns-data/pattern-hiro.patt'
 				markerParameters.markersAreaEnabled = false
 			}else if( _this.data.preset === 'kanji' ){
 				markerParameters.type = 'pattern'
@@ -8375,12 +8375,50 @@ AFRAME.registerComponent('arjs-anchor', {
 				markerParameters.patternUrl = _this.data.patternUrl;
 				markerParameters.markersAreaEnabled = false
 				
-			}else if( _this.data.preset === 'custom' ){ 
+			}else if( _this.data.preset === 'custom1' ){ 
 				arProfile.defaultMarkerParameters.type = 'pattern' 
 				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
 				arProfile.defaultMarkerParameters.markersAreaEnabled = false
 			
-			}else {
+			}else if( _this.data.preset === 'custom2' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom3' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom4' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom5' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom6' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom7' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}else if( _this.data.preset === 'custom8' ){ 
+				arProfile.defaultMarkerParameters.type = 'pattern' 
+				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			
+			}
+			
+			
+			else {
 				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 			}
 
